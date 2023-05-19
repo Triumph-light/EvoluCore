@@ -1,0 +1,4 @@
+**.d.ts
+/packages/evolucore
+dist
+node_modules
