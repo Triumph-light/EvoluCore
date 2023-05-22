@@ -1,15 +1,18 @@
 /** @format */
-
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 // @ts-ignore
 import DefineOptions from 'unplugin-vue-define-options/vite';
+// 支持jsx
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
     dts({
       entryRoot: 'src',
       outputDir: ['../evolucore/es/src', '../evolucore/lib/src/'],
@@ -35,14 +38,9 @@ export default defineConfig({
       }
     }
   ],
-  // 配置全局css变量
-  // css:{
-  //   preprocessorOptions:{
-  //     less:{
-  //       additionalData:'@import "./src/assets/styles/variables.less";'
-  //     }
-  //   }
-  // },
+  test: {
+    environment: 'happy-dom'
+  },
   build: {
     // 打包后的文件目录
     outDir: 'es',

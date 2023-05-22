@@ -1,8 +1,9 @@
-import * as components from "./index";
-declare module "@vue/runtime-core" {
+import * as components from './index';
+// GlobalComponents  for Volar
+declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    EcButton: typeof components.Button;
-    // EaIcon: typeof components.Icon;
+    EcButton: typeof components.EcButton;
   }
 }
+
 export {};

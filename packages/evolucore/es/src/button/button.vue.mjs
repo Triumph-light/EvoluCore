@@ -19,7 +19,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const props = __props;
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("button", {
-        class: normalizeClass(["xtx-button ellipsis", [props.size, props.type]])
+        class: normalizeClass(["xtx-button ellipsis", [props.size, props.type]]),
+        ref: "componentRef"
       }, [
         renderSlot(_ctx.$slots, "default")
       ], 2);

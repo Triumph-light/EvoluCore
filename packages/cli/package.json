@@ -1,13 +1,13 @@
 {
   "name": "create-evolucore",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "",
   "bin": "index.js",
   "keywords": [
-    "evolucore",
-    "vue3组件库"
+    "evolucore-cli",
+    "vue3组件库脚手架"
   ],
-  "author": "",
+  "author": "triumph-light",
   "type": "module",
   "license": "MIT",
   "dependencies": {
@@ -17,5 +17,9 @@
     "download-git-repo": "^3.0.2",
     "ora": "^6.3.1",
     "prompts": "^2.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Triumph-light/EvoluCore"
   }
 }

@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.2",
-    "vite": "^4.3.5"
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.3.8"
   },
   "dependencies": {
     "@EvoluCore/components": "workspace:^"

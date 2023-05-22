@@ -10,8 +10,8 @@
     "moduleResolution": "Node",
     "lib": ["esnext", "dom"],
     "types": [
-      "./packages/evolucore/es/src/components.d.ts",
-      "unplugin-vue-define-options/macros-global"
+      "unplugin-vue-define-options/macros-global",
+      "./packages/components/src/components.d.ts"
     ]
   }
 }

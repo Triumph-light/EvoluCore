@@ -4,4 +4,5 @@ import evolucore from '@EvoluCore/components';
 
 const app = createApp(App);
 
-app.use(evolucore).mount('#app');
+app.use(evolucore);
+app.mount('#app');

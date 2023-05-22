@@ -1,6 +1,6 @@
 /** @format */
 export * from './src/index';
-import { App } from 'vue';
+import type { App } from 'vue';
 declare const _default: {
     install: (app: App) => void;
 };

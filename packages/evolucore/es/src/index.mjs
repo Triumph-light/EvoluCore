@@ -1,4 +1,4 @@
-import { Button } from "./button/index.mjs";
+import { EcButton } from "./button/index.mjs";
 export {
-  Button
+  EcButton
 };

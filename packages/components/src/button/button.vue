@@ -1,10 +1,11 @@
 <!-- @format -->
 
 <script lang="ts" setup>
-import './style/index.less'
+import './style/index.less';
+
 defineOptions({
   name: 'EcButton'
-})
+});
 
 const props = defineProps({
   size: {
@@ -13,13 +14,17 @@ const props = defineProps({
   },
   type: {
     type: String,
-    default: 'dafault'
+    default: 'primary'
   }
-})
+});
 </script>
 
 <template>
-  <button class="xtx-button ellipsis" :class="[props.size, props.type]">
+  <button
+    class="xtx-button ellipsis"
+    :class="[props.size, props.type]"
+    ref="componentRef"
+  >
     <slot />
   </button>
 </template>

@@ -5,7 +5,7 @@ import commandLineUsage from 'command-line-usage';
 import { readFile } from 'fs/promises';
 // 配置用户输入的选择项
 import prompts from 'prompts';
-import gitClone from './utils/gitClone';
+import gitClone from './utils/gitClone.js';
 
 const pkg = JSON.parse(
   await readFile(new URL('./package.json', import.meta.url))
@@ -45,7 +45,7 @@ const helpSections = [
 const promptsOptions = [
   {
     type: 'text',
-    name: 'project-name',
+    name: 'name',
     message: '请输入项目名称'
   },
   {
@@ -53,8 +53,8 @@ const promptsOptions = [
     name: 'template',
     message: '请选择一个模板',
     choices: [
-      { title: 'kitty-ui', value: 0 },
-      { title: 'easyest', value: 1 }
+      { title: 'kitty-ui', value: 1 },
+      { title: 'evolucore', value: 2 }
     ]
   }
 ];
@@ -63,13 +63,15 @@ const options = commandLineArgs(optionDefinitions);
 // 下载模板的地址
 const remoteList = {
   1: 'https://gitee.com/geeksdidi/kittyui.git',
-  2: 'https://github.com/qddidi/easyest.git'
+  2: 'https://github.com/Triumph-light/EvoluCore.git#main'
 };
 
 const getUserInfo = async () => {
   const res = await prompts(promptsOptions);
   if (!res.name || !res.template) return;
-  gitClone(`direct:${remoteList[res.template]}`, res.name);
+  gitClone(`direct:${remoteList[res.template]}`, res.name, {
+    clone: true
+  });
 };
 
 const runOptions = () => {
