@@ -1,6 +1,4 @@
 <!-- @format -->
 
-<template>
-  <EcButton></EcButton>
-</template>
+<template><EcButton> 123</EcButton></template>
 <script lang="ts" setup></script>
