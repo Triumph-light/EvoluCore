@@ -1,4 +1,4 @@
-import * as components from './index.ts';
+import * as components from './index';
 // GlobalComponents  for Volar
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
