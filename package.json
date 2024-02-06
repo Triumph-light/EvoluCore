@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "evolucore:dev": "pnpm run --filter play dev",
+    "dev:evolucore": "pnpm run --filter play dev",
     "build:evolucore": "gulp -f packages/components/script/build/index.ts",
     "publish:evolucore": "gulp -f packages/components/script/publish/index.ts",
     "docs:dev": "pnpm run --filter site docs:dev",
