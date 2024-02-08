@@ -5,6 +5,8 @@ import commandLineUsage from 'command-line-usage';
 import { readFile } from 'fs/promises';
 // 配置用户输入的选择项
 import prompts from 'prompts';
+// 颜色
+import chalk from 'chalk';
 import gitClone from './utils/gitClone.js';
 
 const pkg = JSON.parse(
@@ -67,7 +69,17 @@ const remoteList = {
 };
 
 const getUserInfo = async () => {
-  const res = await prompts(promptsOptions);
+  let res = {};
+  try {
+    res = await prompts(promptsOptions, {
+      onCancel: () => {
+        throw new Error(chalk.red('X') + 'Operation cancelled');
+      }
+    });
+  } catch (cancelled) {
+    console.log(cancelled.message);
+    process.exit(1);
+  }
   if (!res.name || !res.template) return;
   gitClone(`direct:${remoteList[res.template]}`, res.name, {
     clone: true

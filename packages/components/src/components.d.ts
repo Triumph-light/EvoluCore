@@ -3,6 +3,8 @@ import * as components from './index';
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     EcButton: typeof components.EcButton;
+    EcDialog: typeof components.EcDialog;
+    EcCalendar: typeof components.EcCalendar;
   }
 }
 

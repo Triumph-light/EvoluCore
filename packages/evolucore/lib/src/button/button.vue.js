@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
 const vue = require("vue");
-require("./style/index.css");
-const __default__ = vue.defineComponent({
+/* empty css                    */const __default__ = vue.defineComponent({
   name: "EcButton"
 });
 const _sfc_main = /* @__PURE__ */ vue.defineComponent({
@@ -14,7 +13,7 @@ const _sfc_main = /* @__PURE__ */ vue.defineComponent({
     },
     type: {
       type: String,
-      default: "dafault"
+      default: "primary"
     }
   },
   setup(__props) {

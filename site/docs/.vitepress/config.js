@@ -1,49 +1,63 @@
 /** @format */
+import { defineConfig } from 'vitepress';
+// @ts-ignore
+import DefineOptions from 'unplugin-vue-define-options/vite';
 
-export default {
+export default defineConfig({
+  title: 'EvoluCore',
+  titleTemplate: '一个快速搭建Vue3组件库的框架',
   themeConfig: {
-    siteTitle: 'vitepress',
+    siteTitle: 'EvoluCore',
     nav: [
       {
         text: '指南',
-        link: '/guild/introduce'
+        link: '/guide/introduce'
       },
       {
         text: '组件',
-        link: 'components/button/'
+        link: 'components/button'
       }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/triumph-light/evolucore' }
     ],
     sidebar: {
-      '/guild': [
+      '/guide': [
         {
-          text: '引入',
+          text: '引言',
           items: [
             {
               text: '介绍',
-              link: '/guild/introduce'
+              link: '/guide/introduce'
             },
             {
               text: '快速开始',
-              link: '/guild/quickstart'
+              link: '/guide/quickstart'
             }
           ]
         },
         {
-          text: '进阶',
+          text: '基础组件',
           items: [
             {
-              text: 'xxx',
-              link: '/xxx'
+              text: '按钮',
+              link: '/components/button'
             }
           ]
         }
       ],
-      '/components/': [
+      '/components': [
         {
           text: '基础组件',
+          items: [
+            {
+              text: 'Button',
+              link: '/components/button'
+            }
+          ]
+        },
+        {
+          text: '业务组件',
           items: [
             {
               text: 'Button',
@@ -53,5 +67,8 @@ export default {
         }
       ]
     }
+  },
+  vite: {
+    plugins: [DefineOptions()]
   }
-}
+});

@@ -1,6 +1,5 @@
 import { defineComponent, openBlock, createElementBlock, normalizeClass, renderSlot } from "vue";
-import "./style/index.css";
-const __default__ = defineComponent({
+/* empty css                   */const __default__ = defineComponent({
   name: "EcButton"
 });
 const _sfc_main = /* @__PURE__ */ defineComponent({
@@ -12,7 +11,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     },
     type: {
       type: String,
-      default: "dafault"
+      default: "primary"
     }
   },
   setup(__props) {

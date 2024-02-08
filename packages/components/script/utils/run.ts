@@ -4,7 +4,6 @@ import { spawn } from 'child_process';
 
 export default async (command: string, path: string) => {
   const [cmd, ...args] = command.split(' ');
-  console.log([cmd, ...args]);
 
   return new Promise((resolve, reject) => {
     const app = spawn(cmd, args, {

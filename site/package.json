@@ -16,6 +16,7 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
-    "evolucore": "workspace:^"
+    "@EvoluCore/components": "workspace:^",
+    "evolucore": "^1.0.1"
   }
 }

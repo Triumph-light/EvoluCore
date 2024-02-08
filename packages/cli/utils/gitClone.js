@@ -17,10 +17,10 @@ export default (remote, name, option) => {
         return;
       }
       downSpinner.succeed(chalk.green('下载模板成功!'));
-      console.log(chalk.green(`cd ${name}\r\n`));
-      console.log(chalk.blue('pnpm install\r\n'));
-      console.log('pnpm run build:evolucore\r\n');
-      console.log('pnpm run evolucore:dev\r\n');
+      console.log(chalk.green(`  cd ${name}\r\n`));
+      console.log(chalk.blue('  pnpm install\r\n'));
+      console.log('  pnpm run build:evolucore\r\n');
+      console.log('  pnpm run evolucore:dev\r\n');
       resovle();
     });
   });

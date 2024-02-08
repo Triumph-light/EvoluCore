@@ -1,8 +1,6 @@
 <!-- @format -->
 
 <script lang="ts" setup>
-import './style/index.less';
-
 defineOptions({
   name: 'EcButton'
 });
@@ -21,11 +19,13 @@ const props = defineProps({
 
 <template>
   <button
-    class="xtx-button ellipsis"
-    :class="[props.size, props.type]"
+    :class="[$style[props.size], $style[props.type], $style['xtx-button']]"
     ref="componentRef"
   >
     <slot />
   </button>
 </template>
-<style lang="less"></style>
+
+<style lang="less" module>
+@import './style/index.module.less';
+</style>

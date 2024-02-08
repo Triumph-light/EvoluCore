@@ -27,6 +27,7 @@ module.exports = {
     // 2. 开启 prettier 自动修复的功能
     'prettier/prettier': 'error',
     '@typescript-eslint/ban-ts-comment': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'linebreak-style': [0, 'error', 'windows']
   }
 };

@@ -1,16 +1,13 @@
 ---
 layout: home
 
-title: EvoluCore
-titleTemplate: 一个快速搭建Vue3组件库的框架
-
 hero:
   name: EvoluCore
   text: 一个快速搭建Vue3组件库的框架
   tagline: 让你的组件库开发更简单
   image:
-    /src: /logo.png
-    alt: Easyest
+    src: /assets/sun.png
+    alt: EvoluCore
   actions:
     - theme: brand
       text: 开始
@@ -22,13 +19,16 @@ hero:
 features:
   - icon: 💡
     title: Vue3组件库
-    details: 基于vite+TypeScript开发
+    details: 基于vite+TypeScript开发。
   - icon: 📦
     title: 让你的组件库开发更简单
-    details: 提供一个Vue3组件库开发环境
+    details: 提供一个Vue3组件库开发环境。
   - icon: 🛠️
     title: 按需引入
     details: 直接支持按需引入无需配置任何插件。
+  - icon: 🔑
+    title: 样式隔离
+    details: 防止组件库组件样式影响用户项目的样式。
 ---
 
 <!-- @format -->

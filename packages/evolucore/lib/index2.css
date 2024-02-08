@@ -1,8 +1,6 @@
 /** @format */
 .xtx-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: none;
   outline: none;
   background: #fff;
