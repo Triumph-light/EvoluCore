@@ -5,3 +5,4 @@ export * from './infinitescroll';
 export * from './button';
 export * from './dialog';
 export * from './calendar';
+export * from './confirm';

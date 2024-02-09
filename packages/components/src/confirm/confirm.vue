@@ -27,14 +27,14 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { defineComponent, ref, onMounted } from 'vue';
 
 // 处理使用render函数时无法使用自定义封装组件
 import EcButton from '../button/button.vue';
 
-defineComponent({
-  name: 'WebShopConfirm'
+defineOptions({
+  name: 'EcConfirm'
 });
 
 const props = defineProps({
