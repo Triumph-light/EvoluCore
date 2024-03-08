@@ -9,5 +9,8 @@ import DefineOptions from 'unplugin-vue-define-options/vite';
 export default defineConfig({
   plugins: [vue(), DefineOptions()],
   // 配置打包后的路径问题
-  base: './'
+  base: './',
+  server: {
+    port: 8080
+  }
 });

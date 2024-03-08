@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@EvoluCore/components": "workspace:^",
-    "evolucore": "^1.0.1"
+    "evolucore": "^1.0.1",
+    "highlight.js": "^11.9.0"
   }
 }

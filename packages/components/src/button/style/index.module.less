@@ -2,7 +2,7 @@
 
 @import '../../assets/styles/variables.less';
 
-.xtx-button {
+.ec-button {
   appearance: none;
   border: none;
   outline: none;
@@ -11,43 +11,100 @@
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
+  &.disable {
+    cursor: no-drop;
+  }
 }
 .large {
   width: 240px;
   height: 50px;
   font-size: 16px;
+  &.round {
+    border-radius: 25px;
+  }
 }
 .middle {
   width: 180px;
   height: 50px;
   font-size: 16px;
+  &.round {
+    border-radius: 25px;
+  }
 }
 .small {
   width: 100px;
   height: 32px;
   font-size: 14px;
+  &.round {
+    border-radius: 16px;
+  }
 }
 .mini {
   width: 60px;
   height: 32px;
   font-size: 14px;
+  &.round {
+    border-radius: 16px;
+  }
 }
 .default {
-  border-color: #e4e4e4;
-  color: #666;
+  border-color: @borderColor;
+  color: @regularFontColor;
 }
 .primary {
-  border-color: @webshopColor;
-  background: @webshopColor;
+  border-color: @primary;
+  background: @primary;
   color: #fff;
+  &.plain {
+    background: lighten(@primary, 30%);
+    color: @primary;
+  }
 }
-.plain {
-  border-color: @webshopColor;
-  color: @webshopColor;
-  background: lighten(@webshopColor, 50%);
+.success {
+  border-color: @success;
+  background: @success;
+  color: #fff;
+  &.plain {
+    background: lighten(@success, 30%);
+    color: @success;
+  }
 }
+.warning {
+  border-color: @warning;
+  background: @warning;
+  color: #fff;
+  &.plain {
+    background: lighten(@warning, 30%);
+    color: @warning;
+  }
+}
+.error {
+  border-color: @danger;
+  background: @danger;
+  color: #fff;
+  &.plain {
+    background: lighten(@danger, 30%);
+    color: @danger;
+  }
+}
+.info {
+  border-color: @info;
+  background: @info;
+  color: #fff;
+  &.plain {
+    background: lighten(@info, 30%);
+    color: @info;
+  }
+}
+
 .gray {
   border-color: #ccc;
   background: #ccc;
   color: #fff;
+}
+
+.disabled {
+  cursor: no-drop;
+  pointer-events: none;
+  opacity: 0.6;
 }

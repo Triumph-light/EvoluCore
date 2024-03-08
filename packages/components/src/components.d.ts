@@ -5,6 +5,7 @@ declare module '@vue/runtime-core' {
     EcButton: typeof components.EcButton;
     EcDialog: typeof components.EcDialog;
     EcCalendar: typeof components.EcCalendar;
+    EcSelect: typeof components.EcSelect;
   }
 }
 

@@ -1,0 +1,62 @@
+@import '../../assets/styles/variables.less';
+.ec-select-container {
+  min-width: 250px;
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  input {
+    outline: none;
+    border: 1px solid @borderColor;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    &.disabled {
+      cursor: no-drop;
+      background-color: #f0f0f0;
+    }
+  }
+  .select-right-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    &.rotate {
+      transform: rotateZ(90deg);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .ec-select-options {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    top: 42px;
+    border: 1px solid @borderColor;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    li {
+      list-style: none;
+      line-height: 40px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 14px;
+      &:hover {
+        background: #f0f0f0;
+      }
+    }
+    .ec-select-option {
+      &-disabled {
+        cursor: no-drop;
+        background: #f0f0f0;
+        color: #808080;
+      }
+      &-active {
+        color: @primary;
+      }
+    }
+  }
+}

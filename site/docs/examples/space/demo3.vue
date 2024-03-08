@@ -1,0 +1,31 @@
+<!-- htecl -->
+<template>
+  <ec-space :size="[10, 10]">
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+    <ec-button>按钮</ec-button>
+  </ec-space>
+</template>

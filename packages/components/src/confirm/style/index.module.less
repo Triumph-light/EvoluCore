@@ -1,6 +1,6 @@
 @import '../../assets/styles/variables.less';
 
-.xtx-confirm {
+.ec-confirm {
   position: fixed;
   left: 0;
   top: 0;
@@ -26,30 +26,31 @@
       transform: translate(-50%, -50%);
       opacity: 1;
     }
-    .header,
-    .footer {
-      height: 50px;
-      line-height: 50px;
-      padding: 0 20px;
-    }
     .body {
       padding: 20px 40px;
       font-size: 16px;
       .icon-warning {
-        color: @priceColor;
+        color: @warning;
         margin-right: 3px;
         font-size: 16px;
       }
     }
     .footer {
-      text-align: right;
+      display: flex;
+      flex-direction: row-reverse;
+      height: 50px;
+      padding: 0 20px;
       .xtx-button {
         margin-left: 20px;
       }
     }
     .header {
       position: relative;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
       h3 {
+        line-height: 50px;
         font-weight: normal;
         font-size: 18px;
       }

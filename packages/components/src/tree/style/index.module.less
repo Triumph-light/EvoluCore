@@ -1,0 +1,28 @@
+li {
+  list-style: none;
+  .ec-tree-item {
+    display: flex;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    .right-arrow {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 0;
+      &.rotate {
+        transform: rotateZ(90deg);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    .text {
+      margin-left: 20px;
+    }
+  }
+}
+
+ul,
+li {
+  margin: 0;
+}

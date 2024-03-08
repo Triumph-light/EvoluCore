@@ -1,8 +1,6 @@
-<!-- @format -->
-
+<!-- html -->
 <template>
-  <EcButton>123</EcButton>
+  <EcButton type="error" :round="true" :disabled="true">123</EcButton>
 </template>
-<script setup lang="ts"></script>
 
-<style lang="less" scoped></style>
+<script setup lang="ts"></script>

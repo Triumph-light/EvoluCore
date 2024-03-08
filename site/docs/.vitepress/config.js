@@ -15,7 +15,7 @@ export default defineConfig({
       },
       {
         text: '组件',
-        link: 'components/button'
+        link: 'examples/button/'
       }
     ],
     socialLinks: [
@@ -41,29 +41,82 @@ export default defineConfig({
           items: [
             {
               text: '按钮',
-              link: '/components/button'
+              link: '/examples/button'
             }
           ]
         }
       ],
-      '/components': [
+      '/examples': [
         {
-          text: '基础组件',
+          text: '常规',
           items: [
             {
-              text: 'Button',
-              link: '/components/button'
+              text: 'Color 色彩',
+              link: '/examples/color/index.md'
+            },
+            {
+              text: 'Border 边框',
+              link: '/examples/border/index.md'
             }
           ]
         },
         {
-          text: '业务组件',
+          text: '通用',
           items: [
             {
-              text: 'Button',
-              link: '/components/button'
+              text: 'Button 按钮',
+              link: '/examples/button/index.md'
+            },
+            {
+              text: 'CheckBox 多选',
+              link: '/examples/checkbox/index.md'
+            },
+            {
+              text: 'Input 输入框',
+              link: '/examples/input/index.md'
+            },
+            {
+              text: 'Select 下拉框',
+              link: '/examples/select/index.md'
+            },
+            {
+              text: 'Space 间距',
+              link: '/examples/space/index.md'
             }
           ]
+        },
+        {
+          text: '数据',
+          items: [
+            {
+              text: 'Pagination 分页',
+              link: '/examples/pagination/index.md.md'
+            },
+            {
+              text: 'Tree 树型控件',
+              link: '/examples/tree/index.md'
+            },
+            {
+              text: 'Table 表格',
+              link: '/examples/table/index.md'
+            }
+          ]
+        },
+        {
+          text: '交互',
+          items: [
+            {
+              text: 'Message 消息提示',
+              link: '/examples/message/index.md'
+            },
+            {
+              text: 'Confirm 消息确认',
+              link: '/examples/confirm/index.md'
+            }
+          ]
+        },
+        {
+          text: '业务组件'
         }
       ]
     }

@@ -1,34 +1,34 @@
 <template>
   <!-- 遮罩层 -->
-  <div class="xtx-confirm" :class="{ fade }">
+  <div :class="[$style['ec-confirm'], $style['fade']]">
     <!-- 核心内容 -->
-    <div class="wrapper" :class="{ fade }">
-      <div class="header">
+    <div :class="[$style['wrapper'], $style['fade']]">
+      <div :class="$style['header']">
         <h3>{{ props.title }}</h3>
         <a
           href="JavaScript:;"
-          class="iconfont icon-close-new"
-          @click="cancelCallback"
+          :class="[$style['iconfont'], $style[' icon-close-new']]"
+          @click="props.cancelCallback"
         ></a>
       </div>
-      <div class="body">
-        <i class="iconfont icon-warning"></i>
+      <div :class="$style['body']">
+        <i :class="[$style['iconfont'], $style[' icon-warning']]"></i>
         <span>{{ props.text }}</span>
       </div>
-      <div class="footer">
-        <EcButton size="mini" type="gray" @click="props.cancelCallback"
-          >取消</EcButton
-        >
-        <EcButton size="mini" type="primary" @click="props.submitCallback"
-          >确认</EcButton
-        >
+      <div :class="$style['footer']">
+        <EcButton size="mini" type="default" @click="innerClose">{{
+          cancelButtonText
+        }}</EcButton>
+        <EcButton size="mini" type="primary" @click="innerConfirm">{{
+          confirmButtonText
+        }}</EcButton>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { defineComponent, ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 
 // 处理使用render函数时无法使用自定义封装组件
 import EcButton from '../button/button.vue';
@@ -51,6 +51,14 @@ const props = defineProps({
   },
   cancelCallback: {
     type: Function
+  },
+  cancelButtonText: {
+    type: String,
+    default: '取消'
+  },
+  confirmButtonText: {
+    type: String,
+    default: '确定'
   }
 });
 
@@ -60,6 +68,16 @@ onMounted(() => {
     fade.value = true;
   }, 0);
 });
+
+const innerClose = () => {
+  fade.value = false;
+  props.cancelCallback && props.cancelCallback();
+};
+
+const innerConfirm = () => {
+  fade.value = false;
+  props.submitCallback && props.submitCallback();
+};
 </script>
 
 <style lang="less" module>
