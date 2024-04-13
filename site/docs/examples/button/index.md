@@ -28,11 +28,13 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 <ec-table :options="options"></ec-table>
 
 <script setup>
-    import Demo1 from './Demo1.vue'
-    import Demo2 from './Demo2.vue'
-    import Demo3 from './Demo3.vue'
-    import Demo4 from './Demo4.vue'
-  import {reactive} from 'vue'
+import { useData } from 'vitepress'
+import { watch } from 'vue'
+import Demo1 from './Demo1.vue'
+import Demo2 from './Demo2.vue'
+import Demo3 from './Demo3.vue'
+import Demo4 from './Demo4.vue'
+import {reactive} from 'vue'
 const state = reactive({
   options:{
     fileds:[
@@ -76,4 +78,11 @@ const state = reactive({
   }
 })
 const {options} = state
+
+const { isDark } = useData()
+console.log(isDark)
+watch(isDark,()=>{
+  console.log('123')
+  window.document.documentElement.setAttribute('data-theme', isDark.value ? 'dark' : 'light')
+})
 </script>

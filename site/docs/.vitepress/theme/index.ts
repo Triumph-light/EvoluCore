@@ -9,7 +9,7 @@ import preview from '../../components/preview.vue';
 
 export default {
   ...DefaultTheme,
-  enhanceApp: async ({ app }) => {
+  enhanceApp: async ({ app, siteData }) => {
     app.use(evolucore);
     app.directive('highlight', function (el) {
       let blocks = el.querySelectorAll('pre code');

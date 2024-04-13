@@ -1,5 +1,4 @@
-// 主题
-@themeColor: #27ba9b;
+@import './theme.less';
 
 // 辅助
 @helpColor: #e26237;
@@ -16,13 +15,13 @@
 @primary: #409eff;
 
 // 主要字体颜色
-@majorFontColor: #303133;
+@majorFontColor: var(--major-font-color);
 // 常规字体颜色
-@regularFontColor: #606266;
+@regularFontColor: var(--regular-font-color);
 // 次要字体颜色
-@minorFontColor: #909399;
+@minorFontColor: var(--minor-font-color);
 // 占位字体颜色
-@placeholderFontColor: #c0c4cc;
+@placeholderFontColor: var(--placeholder-font-color);
 
 // 实边框粗细
 @solidBorderWidth: 1px;
