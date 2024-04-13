@@ -1,7 +1,7 @@
 {
   "name": "EvoluCore",
   "version": "1.0.0",
-  "description": "组件库",
+  "description": "",
   "main": "index.ts",
   "scripts": {
     "dev:evolucore": "pnpm run --filter play dev",
